@@ -1,0 +1,35 @@
+@import "google-font-quicksand.css";
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background: #9f9f9f;
+    border: 5px none #ffffff;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #c0c0c0;
+}
+::-webkit-scrollbar-thumb:active {
+    background: #000000;
+}
+::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border: 0px none #ffffff;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-track:hover {
+    background: #666666;
+}
+::-webkit-scrollbar-track:active {
+    background: #aeaeae;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}

@@ -1,0 +1,267 @@
+/*
+Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+Font from google fonts https://fonts.google.com/specimen/Quicksand (github.com/andrew-paglinawan/QuicksandFamily)
+<a target="_blank" href="https://icons8.com/icons/set/facebook-like">Facebook Like icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icons/set/paper-plane-message-1">Paper Plane Message icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+Photo by Brian Patrick Tagalog on Unsplash
+Photo by Matthew Smith on Unsplash
+<a target="_blank" href="https://icons8.com/icons/set/sign-in-form-password">Sign in Form Password icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+ */
+@import url('fonts-and-scrolls.css');
+
+* {
+    font-family: Quicksand;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    float: left;
+    font-family: Quicksand;
+}
+
+main {
+    width: 100%;
+    min-height: calc(100% - 47px);
+    height: auto;
+    margin-top: 47px;
+    float: left;
+    background: rgb(233, 232, 210);
+}
+
+#main-center {
+    width: calc(100% - 30px);
+    min-height: calc(100% - 30px);
+    height: auto;
+    margin: 15px 15px 0px;
+    float: left;
+}
+
+#main-col {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100%;
+    height: auto;
+    float: left;
+    margin: 15px 0px 0px;
+}
+
+@media all and (min-width: 1035px) {
+    #main-col {
+        margin-left: calc(50% - 500px);
+        margin-right: calc(50% - 500px);
+    }
+}
+
+#main-col::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+
+#bar {
+    width: 100%;
+    height: 47px;
+    background: rgb(30, 30, 30);
+    color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    box-shadow: 0px 0px 4px 0px black;
+}
+
+#bar-avatar {
+    width: 35px;
+    height: 35px;
+    margin: 6px 6px 6px 7px;
+    float: left;
+    background-image: url("../images/avatar.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    cursor: hand;
+}
+
+#bar-avatar-with-menu {
+    display: none;
+    border-radius: 30px;
+}
+
+@media all and (max-width: 750px) {
+    #bar-avatar {
+        display: none;
+    }
+
+    #bar-menu {
+        display: none;
+    }
+
+    #bar-avatar-with-menu {
+        display: block;
+        width: 35px;
+        height: 35px;
+        margin: 6px 6px 6px 7px;
+        float: left;
+        background-image: url("../images/avatar.png");
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+#bar-menu {
+    width: auto;
+    height: 47px;
+    float: left;
+    margin-left: 15px;
+}
+
+.menu-item {
+    width: max-content;
+    margin: 12px 15px 10px;
+    font-size: 18px;
+    line-height: 25px;
+    height: 25px;
+    float: left;
+    text-decoration: none;
+    color: white;
+    cursor: hand;
+}
+
+.menu-item:active {
+    color: white;
+}
+
+#mobile-menu {
+    width: 100vw;
+    min-height: 120px;
+    height: auto;
+    margin-top: 41px;
+    margin-left: -7px;
+    background: rgb(30, 30, 30);
+    display: none;
+    box-sizing: border-box;
+    float: left;
+    border-top: 2px dashed white;
+}
+
+.mobile-menu-item {
+    width: 100%;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    cursor: hand;
+}
+
+#bar-search {
+    float: right;
+    width: auto;
+    height: 47px;
+    margin-right: 10px;
+}
+
+#search-input {
+    width: 200px;
+    float: left;
+    height: 31px;
+    margin: 8px 0px 8px 8px;
+    padding-left: 10px;
+    border: 0px;
+    border-radius: 5px 0px 0px 5px;
+    font-family: Quicksand;
+}
+
+#search-input:focus {
+    outline: none;
+}
+
+#search-button {
+    width: auto;
+    height: 31px;
+    float: left;
+    margin: 8px 0 0;
+    border: 0px;
+    border-radius: 0px 5px 5px 0px;
+    font-family: Quicksand;
+    font-weight: 500;
+}
+
+.user-ticket {
+    width: calc(100% - 20px);
+    height: 80px;
+    float: left;
+    margin: 10px 10px 0px;
+    background: rgb(30, 30, 30);
+    color: white;
+    border-radius: 6px;
+}
+
+.user-image {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.user-username, .user-posts {
+    width: calc(100% - 220px);
+    height: 30px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    line-height: 30px;
+    float: left;
+}
+
+.user-posts {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.user-follow {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    margin: 25px 30px 25px 10px;
+    background: gray;
+    float: right;
+    text-align: center;
+    background: white;
+    color: rgb(30, 30, 30);
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: hand;
+}
+
+#pagination {
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    float: left;
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.pag-item {
+    width: 20px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(30, 30, 30);
+}
+
+footer {
+    width: 100%;
+    float: left;
+    height: 180px;
+    background: rgb(30, 30, 30);
+}

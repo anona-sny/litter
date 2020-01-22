@@ -1,0 +1,209 @@
+@import url('fonts-and-scrolls.css');
+
+* {
+    font-family: Quicksand;
+}
+
+
+#only-js {
+    display: none;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    float: left;
+    margin:0px;
+    font-family: Quicksand;
+    background-image: url("../images/forest.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+#center {
+    width: 500px;
+    height: 700px;
+    position: fixed;
+    top: calc(50% - 350px);
+    left: calc(50% - 250px);
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+@media all and (max-width: 530px){
+    #center {
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        background: white;
+        border-radius: 6px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+}
+
+#registration-header {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    float: left;
+    text-align: center;
+    background-image: url("../images/back.jpg");
+    font-weight: 900;
+    font-size: 30px;
+    background-position: center ;
+    background-size: cover;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.registration-group {
+    width: calc(100% - 40px);
+    height: 40px;
+    float: left;
+    margin: 20px 20px 0px;
+}
+
+.short-group {
+    width: auto;
+    margin-right: 0px;
+}
+
+.input-icon {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    font-size: 11px;
+    float: left;
+    background-color: rgb(30, 30, 30);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.input {
+    width: calc(100% - 40px);
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    border: 1px solid rgba(30, 30, 30);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding-left: 20px;
+}
+
+.input.invalid {
+    border-color: red;
+}
+
+.input:focus {
+    outline: none;
+}
+
+#profile-photo {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#profile-photo + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#profile-photo:focus + label,
+#profile-photo + label:hover {
+    background-color: red;
+}
+
+#label-file {
+    width: auto;
+    height: 40px;
+    box-sizing: border-box;
+    float: left;
+    background-color: rgb(30, 30, 30);
+    border-radius: 6px;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#back-button {
+    width: auto;
+    height: 40px;
+    margin: 20px;
+    position:absolute;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 6px;
+    background: rgb(30, 30, 30);
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    cursor: hand;
+    text-decoration: none;
+}
+
+#registration {
+    width: auto;
+    height: 40px;
+    margin: 20px;
+    position:absolute;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 6px;
+    background: rgb(30, 30, 30);
+    border: 0px;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    cursor: hand;
+}
+
+#profile-photo-preview {
+    width: 100px;
+    height: 100px;
+    float: right;
+    margin-right: 40px;
+    margin-top: 20px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+}
+
+#label-icon-username {
+    background-image: url("../images/username.png");
+}
+
+#label-icon-password {
+    background-image: url("../images/password.png");
+}
+
+#label-icon-email {
+    background-image: url("../images/email.png");
+}

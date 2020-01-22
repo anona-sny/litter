@@ -1,0 +1,230 @@
+@import url('fonts-and-scrolls.css');
+
+* {
+    font-family: Quicksand;
+    color: rgb(30, 30, 30);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    float: left;
+    margin:0px;
+    font-family: Quicksand;
+    background-image: url("../images/forest.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+#only-js {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 47px;
+    float: left;
+}
+
+#login-button, #registration-button {
+    width: auto;
+    box-sizing: border-box;
+    height: 35px;
+    margin: 6px 25px 6px 6px;
+    float: right;
+    line-height: 35px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: hand;
+    text-decoration: none;
+    color: rgb(30, 30, 30);
+}
+
+main {
+    position: fixed;
+    top: calc(50% - 47px);
+    left: 0px;
+    width: 100%;
+    height: 110px;
+    text-align: center;
+}
+
+main h1 {
+    margin: 0px;
+    padding: 0px;
+    line-height: 80px;
+    height: 80px;
+    font-size: 64px;
+    color: white;
+    text-shadow: 5px 6px 18px rgba(30, 30, 30, 0.8);
+}
+
+main div {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-shadow: 5px 6px 18px rgba(30, 30, 30, 0.8);
+}
+
+#login-overflow {
+    display: none;
+    width: 400px;
+    height: 500px;
+    position: fixed;
+    top: calc(50% - 250px);
+    left: calc(50% - 200px);
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+@media all and (max-width: 500px){
+    #login-overflow {
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        background: white;
+        border-radius: 6px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+}
+
+#login-header {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    float: left;
+    text-align: center;
+    background-image: url("../images/back.jpg");
+    font-weight: 900;
+    font-size: 30px;
+    background-position: center ;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.login-group {
+    width: calc(100% - 40px);
+    height: 40px;
+    float: left;
+    margin: 20px 20px 0px;
+}
+
+.label-icon {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    font-size: 11px;
+    float: left;
+    background-color: rgb(30, 30, 30);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#label-icon-username {
+    background-image: url("../images/username.png");
+}
+
+#label-icon-password {
+    background-image: url("../images/password.png");
+}
+
+.input {
+    width: calc(100% - 40px);
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    border: 1px solid rgba(30, 30, 30);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding-left: 20px;
+}
+
+#not-robot-checkbox {
+    -webkit-appearance: none;
+    background-color: #ffffff;
+    border: 1px solid rgb(30, 30, 30);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+
+#not-robot-checkbox:focus {
+    outline: none;
+}
+
+
+#not-robot-checkbox:checked {
+    border: 2px solid rgb(30, 30, 30);
+    color: #99a1a7;
+}
+
+#not-robot-checkbox:checked:after {
+    content: '\2714';
+    font-size: 18px;
+    position: absolute;
+    top: 0px;
+    left: 6px;
+    color: rgb(30, 30, 30);
+}
+
+.label-input {
+    width: auto;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+    padding-left: 10px;
+}
+
+#back-button {
+    width: auto;
+    height: 40px;
+    margin: 20px;
+    position:absolute;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 6px;
+    background: rgb(30, 30, 30);
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    cursor: hand;
+}
+
+#login {
+    width: auto;
+    height: 40px;
+    margin: 20px;
+    position:absolute;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 6px;
+    background: rgb(30, 30, 30);
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    cursor: hand;
+}

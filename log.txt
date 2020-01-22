@@ -1,0 +1,12 @@
+DELETE FROM follows WHERE followed=17 AND user_id=18
+SELECT id FROM users WHERE username='anona'
+INSERT INTO follows (user_id, followed) VALUES(18, 17)
+SELECT id FROM users WHERE username='dmitry'
+INSERT INTO follows (user_id, followed) VALUES(18, 19)
+DELETE FROM follows WHERE followed=19 AND user_id=18
+SELECT id FROM users WHERE username='Synthinesia'
+INSERT INTO follows (user_id, followed) VALUES(18, 20)
+SELECT id FROM users WHERE username='dmitry'
+INSERT INTO follows (user_id, followed) VALUES(18, 19)
+SELECT id FROM users WHERE username='Synthinesia'
+INSERT INTO follows (user_id, followed) VALUES(17, 20)
