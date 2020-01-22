@@ -11,7 +11,6 @@ require_once(__DIR__."/classes/services/RequestRobot.php");
 $reqR = new RequestRobot();
 if(isset($_SESSION["id"])) {
     if(isset($_POST["command"]) and $_POST["command"] == "login") {
-        session_destroy();
         print($reqR->login($_POST["data"]));
     } else if(isset($_POST["command"]) and isset($_POST["data"])) {
         print($reqR->proceed($_POST["command"], $_POST["data"]));

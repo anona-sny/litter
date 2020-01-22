@@ -56,13 +56,13 @@ $wall_posts = $user->getWallPosts();
         <div id="mobile-menu">
             <div class="mobile-menu-item" id="profile-redirect">Profil</div>
             <div class="mobile-menu-item">Zeď</div>
-            <div class="mobile-menu-item">Přátelé</div>
+            <div class="mobile-menu-item" onclick="window.location.href = '../friends/'">Přátelé</div>
             <div class="mobile-menu-item" href="../logout.php">Odhlásit</div>
         </div>
     </div>
     <div id="bar-menu">
         <a href="#" class="menu-item">Zeď</a>
-        <a class="menu-item">Přátelé</a>
+        <a class="menu-item" onclick="window.location.href = '../friends/'">Přátelé</a>
         <a class="menu-item" href="../logout.php">Odhlásit</a>
     </div>
     <div id="bar-search">
