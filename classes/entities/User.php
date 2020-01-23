@@ -72,7 +72,8 @@ class User {
         $res = $db->SELECT($sql);
         if(sizeof($res)){
             for ($i = 0; $i<sizeof($res); $i++){
-                $post = new Post($res[$i]["id"], base64_decode($res[$i]["header"]), base64_decode($res[$i]["text"]), $res[$i]["image"], $res[$i]["author"]);
+                $sqlLikes = "SELECT count(*) as 'count' FROM likes WHERE post_id = ".$res[$i]["id"];
+                $post = new Post($res[$i]["id"], base64_decode($res[$i]["header"]), base64_decode($res[$i]["text"]), $res[$i]["image"], $res[$i]["author"], $db->SELECT($sqlLikes)[0]["count"]);
                 array_push($array, $post);
             }
         }
@@ -86,7 +87,8 @@ class User {
         $res = $db->SELECT($sql);
         if(sizeof($res)){
             for ($i = 0; $i<sizeof($res); $i++){
-                $post = new Post($res[$i]["id"], base64_decode($res[$i]["header"]), base64_decode($res[$i]["body"]), $res[$i]["image"], $res[$i]["author"]);
+                $sqlLikes = "SELECT count(*) as 'count' FROM likes WHERE post_id = ".$res[$i]["id"];
+                $post = new Post($res[$i]["id"], base64_decode($res[$i]["header"]), base64_decode($res[$i]["body"]), $res[$i]["image"], $res[$i]["author"], $db->SELECT($sqlLikes)[0]["count"]);
                 array_push($array, $post);
             }
         }
@@ -145,6 +147,20 @@ class User {
             return "true";
         } else {
             return "access denied";
+        }
+    }
+
+    public static function likeArticle($id_article, $id_user){
+        $db = DB::getInstance();
+        $sql = "SELECT count(*) as 'count' FROM likes WHERE user_id=".$id_user." AND post_id=".$id_article;
+        if(intval($db->SELECT($sql)[0]["count"]) > 0) {
+            $sql = "DELETE FROM likes WHERE  user_id=".$id_user." AND post_id=".$id_article;
+            $db->DELETE($sql);
+            return "unliked";
+        } else {
+            $sql = "INSERT INTO likes(user_id, post_id) VALUES(".$id_user.",".$id_article.")";
+            $db->INSERT($sql);
+            return "liked";
         }
     }
 

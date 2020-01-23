@@ -11,11 +11,12 @@ class Post {
     public $body;
     public $image;
 
-    public function __construct($id, $header, $text, $image, $author) {
+    public function __construct($id, $header, $text, $image, $author, $likes) {
         $this->header = $header;
         $this->body = $text;
         $this->id = $id;
         $this->image = $image;
         $this->author = $author;
+        $this->likes = $likes;
     }
 }

@@ -20,7 +20,7 @@
             echo '<article-header>'.$posts[$i]->header.'</article-header>';
             echo '<article-body>'.$posts[$i]->body.'</article-body>';
             echo '<article-image style="background-image: url(\'../uploaded/'.$posts[$i]->image.'\'); '.($posts[$i]->image==null?'display:none':'display:block').'"></article-image>';
-            echo '<article-footer><div class="share-button"></div><div class="like-button"></div></article-footer>';
+            echo '<article-footer><div class="like-button" post-id="'.$posts[$i]->id.'" onclick="likeTweet(this)"></div><div class="like-count">'.$posts[$i]->likes.'</div></article-footer>';
             echo '</article>';
         }
         ?>

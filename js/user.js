@@ -61,6 +61,28 @@ function deleteTweet(object){
     });
 }
 
+function likeTweet(object){
+    let numberCountHTML = object.parentElement.lastChild;
+    let data = {
+        idPost: object.getAttribute("post-id")
+    };
+    $.ajax({
+        url: '../robot.php',
+        type: 'POST',
+        data: {command: "likeArticle", data: JSON.stringify(data)},
+        success: function (response) {
+            console.log(response);
+            if(response === "liked"){
+                numberCountHTML.innerHTML = parseInt(numberCountHTML.innerHTML)+1;
+            } else if(response === "unliked") {
+                numberCountHTML.innerHTML = parseInt(numberCountHTML.innerHTML)-1;
+            } else {
+                alert("chyba");
+            }
+        }
+    });
+}
+
 function uploadImage(element){
     var formData = new FormData();
     formData.append("command", "saveImage");

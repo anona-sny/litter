@@ -77,6 +77,28 @@ function saveArticle() {
     }
 }
 
+function likeTweet(object){
+    let numberCountHTML = object.parentElement.lastChild;
+    let data = {
+        idPost: object.getAttribute("post-id")
+    };
+    $.ajax({
+        url: '../robot.php',
+        type: 'POST',
+        data: {command: "likeArticle", data: JSON.stringify(data)},
+        success: function (response) {
+            console.log(response);
+            if(response === "liked"){
+                numberCountHTML.innerHTML = parseInt(numberCountHTML.innerHTML)+1;
+            } else if(response === "unliked") {
+                numberCountHTML.innerHTML = parseInt(numberCountHTML.innerHTML)-1;
+            } else {
+                alert("chyba");
+            }
+        }
+    });
+}
+
 function searchProfiles() {
     let searchValue = $("#search-input").val();
     let usernameRegex = /^[A-Za-z0-9_]{0,25}$/;

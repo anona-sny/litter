@@ -19,6 +19,7 @@ $wall_posts = $user->getWallPosts();
 <head>
     <title>Litter</title>
     <link rel="stylesheet" href="../css/wall.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <meta charset="utf-8">
     <meta http-equiv="Content-language" content="cs">
     <meta name="viewport" content="width=device-width, initial-scale=1" viewport-fit=cover">
@@ -37,17 +38,15 @@ $wall_posts = $user->getWallPosts();
                     <article-header>'.$data->header.'</article-header>
                     <article-body>'.$data->body.'</article-body>
                     <article-image style="background-image: url(\'../uploaded/'.$data->image.'\'); '.($data->image==null?'display:none':'display:block').'"></article-image>
-                    <article-footer>
-                        <div class="share-button"></div>
-                        <div class="like-button"></div>
-                    </article-footer>
+                    <article-footer><div class="like-button" post-id="'.$data->id.'" onclick="likeTweet(this)"></div><div class="like-count">'.$data->likes.'</div></article-footer>
                 </article>';
             }
             ?>
         </div>
     </div>
     <footer>
-
+        <div id="author">Created by: Frantiček Zavázal</div>
+        <div id="date">2020 ©</div>
     </footer>
 </main>
 <header id="bar">

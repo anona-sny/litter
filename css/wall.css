@@ -293,11 +293,12 @@ article-footer {
     border-radius: 0px 0px 5px 5px;
 }
 
-.like-button, .share-button {
+.like-button{
     width: 30px;
     height: 30px;
     float: right;
     margin: 5px;
+    margin-right: 15px;
     background-image: url("../images/like-icon.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -306,16 +307,13 @@ article-footer {
     cursor: hand;
 }
 
-.share-button {
-    background-image: url("../images/share-icon.png");
-    margin-right: 15px;
-}
-
-footer {
-    width: 100%;
-    float: left;
-    height: 180px;
-    background: rgb(30,30,30);
+.like-count {
+    width: fit-content;
+    height: 30px;
+    float: right;
+    margin: 5px;
+    border: 0px;
+    line-height: 30px;
 }
 
 #add-story {

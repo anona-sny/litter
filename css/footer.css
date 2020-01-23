@@ -1,0 +1,51 @@
+footer {
+    width: 100%;
+    float: left;
+    min-height: 150px;
+    background: rgb(30, 30, 30);
+    color: rgb(225, 225, 225);
+}
+
+@media all and (min-width: 600px) {
+    #author {
+        width: calc(50% - 50px);
+        height: 50px;
+        margin-left: 50px;
+        margin-top: 80px;
+        line-height: 50px;
+        float: left;
+    }
+
+    #date {
+        width: calc(50% - 50px);
+        height: 50px;
+        margin-right: 50px;
+        margin-top: 80px;
+        line-height: 50px;
+        float: left;
+        text-align: end;
+    }
+}
+
+@media all and (max-width: 599px) {
+    #author {
+        width: calc(100% - 100px);
+        height: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 30px;
+        line-height: 50px;
+        float: left;
+        text-align: center;
+    }
+
+    #date {
+        width: calc(100% - 100px);
+        height: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+        line-height: 50px;
+        float: left;
+        text-align: center;
+    }
+}

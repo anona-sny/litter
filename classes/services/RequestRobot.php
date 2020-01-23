@@ -95,7 +95,9 @@ class RequestRobot {
             return $this->deleteArticle($data);
         } else if($command == "follow" and $data != null){
             return $this->follow($data);
-        } else {
+        } else if($command == "likeArticle" and $data != null){
+            return $this->likeArticle($data);
+        }else {
             return $this->errorMessage("request not found");
         }
     }
@@ -276,5 +278,12 @@ class RequestRobot {
         $id_post = $obj->idPost;
         $id_user = $_SESSION["id"];
         return User::deleteArticle($id_post, $id_user);
+    }
+
+    public function likeArticle($data) {
+        $obj = json_decode($data);
+        $id_post = $obj->idPost;
+        $id_user = $_SESSION["id"];
+        return User::likeArticle($id_post, $id_user);
     }
 }
